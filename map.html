@@ -1,0 +1,256 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="keywords" content="HUST帮,找师妹,找师兄,帮师妹,HUST帮派,华中科科技大学帮派,华中科技大学社交,华科帮派,华科社交,社交,组织活动,HUST爱墙,华科爱墙,华中科技大学爱墙,技能交换,华中科技大学技能交换,华科技能交换" /><meta name="description" content="HUST帮 - 华中科技大学社交平台。" /><meta name="contact-addr" content="ciyin.huang@qq.com" /><meta name="copyright" content="© 2011 N+" /><link type="image/x-icon" href="images/favicon.png" rel="icon" /><link type="image/x-icon" href="images/favicon.png" rel="shortcut icon" /><link href="css/style.css" rel="stylesheet" type="text/css" charset="utf-8" /><link href="css/temp.css" rel="stylesheet" type="text/css" charset="utf-8" />
+    <title>标记我的位置 - HUST帮</title>
+    <script type="text/javascript" src="js/map/Util.js"></script>
+    <script type="text/javascript" src="js/map/LoadLibFile.js"></script>
+    <!--[if lt IE 7]>
+    <script src="js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+    <![endif]-->
+<title>
+
+</title></head>
+<body>
+    <div id="wrap_outer">
+        <div id="wrap_inner">
+            <div id="header">
+                <div class="header_shadow">
+                </div>
+                <div class="wrap">
+                    <a title="HUST帮" class="logo" href="/"><em></em>HUST帮</a>
+                    <div class="navWrap">
+                        <ul class="nav_main">
+                            <li><a href="#">帮帮TA</a></li>
+                            <li><a href="#" >技能互学</a></li>
+                            <li><a href="#" >活动控</a></li>
+                            <li><a href="#" >问问广场</a></li>
+                            <li><a href="#" >写两句</a></li>
+                            <li><a href="#" target="_blank">爱墙</a></li>
+                            <li class="nav_main_av radius5">
+                                <div class="header_menu radius5">
+                                    <ul>
+                                        <li class="mnane"><a href="#">Jhon</a></li>
+                                        <li class="logout"><a href="#">退出</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav_main_d"><a href="javascript:;" title="消息"><span class="icons icon16 i_message">
+                            </span></a><span id="header_tip"><b>1</b></span>
+                                <div class="header_menu_box">
+                                    <ul>
+                                        <li><a href="#">问问回复</a></li>
+                                        <li><a href="#">查看私信<b>+1</b></a></li>
+                                        <li><a href="#">相册评论</a></li>
+                                        <li><a href="#">系统消息</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav_main_d"><a href="javascript:;"><span class="icons icon16 i_setting"
+                                title="账户设置"></span></a>
+                                <div class="header_menu_box settingMenu">
+                                    <ul>
+                                        <li><a href="#">修改资料</a></li>
+                                        <li><a href="#">头像设置</a></li>
+                                        <li><a href="#">个人标签</a></li>
+                                        <li><a href="#">个性域名</a></li>
+                                        <li><a href="#">修改密码</a></li>
+                                        <li><a href="#">技能管理</a></li>
+                                         <li><a href="#">我的位置</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="content">
+                <div class="wrap b_wrap shadow">
+                    <div class="b_main">
+                        
+    
+    <h3>
+        标记我的位置
+    </h3>
+    
+    <div class="bmTab clearfix">
+        <ul>
+            <li><a href="#" class="nav">
+                个人资料</a></li>
+            <li><a href="#" class="nav">
+                头像设置</a></li>
+            <li><a href="#" class="nav">
+                技能管理</a></li>
+            <li><a href="javascript:;" class="nav active">
+                我的位置</a></li>
+            <li><a href="#" class="nav">
+                个人标签</a></li>
+            <li><a href="#" class="nav">
+                个性域名</a></li>
+            <li><a href="#" class="nav">
+                修改密码</a></li>
+        </ul>
+    </div>
+    
+    <div class="maptip">
+        <h4>
+            <b class="fgreen">温馨提示：</b>
+            <p>
+                双击以标记您所处的位置，点击弹出的<img alt="我的位置标记" src="images/map/marker_large.png" width="10px"
+                    height="17px" />分享给您的朋友。</p>
+        </h4>
+    </div>
+    <div id="map_wrap" style="top: 0px;">
+        <div id="bar">
+        </div>
+        <div id="mapholder" style="width: 684px; height: 344px; left: 2px">
+            <div id="map" style="width: 680px; height: 340px;">
+            </div>
+        </div>
+    </div>
+    <div class="maptip">
+        <h4>
+            <b class="fgreen">其他功能：</b>
+            <br />
+            <p>
+                <img alt="局部放大" src="images/map/mapTools/zoomin1.png" width="15px" height="15px" />:点击此按钮后，您可以在地图上拉出一个长方形方框，地图将以此框为中心进行放大</p>
+         <p>
+                <img alt="局部缩小" src="images/map/mapTools/zoomout1.png" width="15px" height="15px" />:点击此按钮后，您可以在地图上拉出一个长方形方框，地图将以此框为中心进行放大</p>
+         <p>
+                <img alt="拖放地图" src="images/map/mapTools/pan1.png" width="15px" height="15px" />:拖放地图</p>
+         <p>
+                <img alt="后退" src="images/map/mapTools/back1.png" width="15px" height="15px" />:后退一步</p>
+         <p>
+                <img alt="前进" src="images/map/mapTools/forward1.png" width="15px" height="15px" />:前进一步</p>
+         <p>
+                <img alt="清除痕迹" src="images/map/mapTools/clear1.png" width="15px" height="15px" />:清除历史痕迹</p>
+                  <p>
+                <img alt="默认" src="images/map/mapTools/forward1.png" width="15px" height="15px" />:恢复默认显示</p>
+        </h4>
+    </div>
+
+
+                    </div>
+                    <div class="b_side">
+                        <a href="#" class="h3">独家记忆</a>
+                        <div class="b_avatar">
+                            <a href="#" class="u_img_big">
+                                <img alt="" src="images/member/5e9/hvm938qd.150.150.jpg" />
+                            </a>
+                            <div class="cf">
+                                <a href="#">修改头像</a>
+                            </div>
+                        </div>
+                        <div class="b_atten clearfix">
+                            <ul>
+                                <li><a href="#"><strong>43</strong><span>关注</span></a></li>
+                                <li><a href="#"><strong>10</strong><span>粉丝</span></a><span class="new"><b>+1</b></span></li>
+                            </ul>
+                        </div>
+                        <div class="b_item">
+                            <ul class="bs_nav">
+                                <li><a href="#"><span class="icons i_home"></span>个人主页</a></li>
+                                <li><a href="#" ><span class="icons i_feed">
+                                </span>好友动态</a></li>
+                                <li><a href="#" ><span class="icons i_find">
+                                </span>附近的人</a></li>
+                                <li><a href="#" ><span class="icons i_photo">
+                                </span>我的相册</a></li>
+                                <li><a href="#" ><span class="icons i_gift">
+                                </span>道具礼品</a></li>
+                                <li><a href="#" ><span class="icons i_bean">
+                                </span>我的红豆</a></li>
+                                <li><a href="#" class='current'><span
+                                    class="icons i_setting"></span>账户设置</a></li>
+                            </ul>
+                        </div>
+                        <div class="b_item">
+                            <h3>
+                                最近来访
+                            </h3>
+                        </div>
+                    </div>
+                    <a class="clear"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="wrap">
+            &copy; 2011 <a href="#">N+</a><a href="#" class="footerLink">
+                关于我们</a><a href="#" class="footerLink">联系我们</a><a href="#"
+                    class="footerLink">加入我们</a><a href="#" class="footerLink">意见反馈</a><a
+                        href="#" class="footerLink">帮助文档</a>
+        </div>
+    </div>
+    <div class="go2top">
+        <a href="javascript:;"><span></span></a>
+    </div>
+    <div class="feedback">
+        <a id="feedback" href="javascript:;">意见反馈</a>
+    </div>
+    <script type="text/javascript">
+    // <![CDATA[ 
+        $(function () {
+            $('.b_avatar').hover(function () {
+                $('.b_avatar .cf').fadeIn(100);
+            }, function () {
+                $('.b_avatar .cf').fadeOut(100);
+            });
+        });
+     // ]]>
+    </script>
+    
+    
+    <script type="text/javascript">
+// <![CDATA[ 
+        //Global constants    
+        var ScaleParameter = 2;
+        var TileSize = 256;
+        var MaxZoomLevel = 5;
+        var DefaultLevel = 1;
+
+        var FullExtent = new Bound(113.65e16, 114.75e16, 22.35e16, 22.9e16);
+        var Width = Util.distanceByLnglat(FullExtent.getMinX() / 1e16, FullExtent.getMaxY() / 1e16, FullExtent.getMaxX() / 1e16, FullExtent.getMaxY() / 1e16);
+        var ImageBaseDir = "images/map/";
+
+        //Create toolbar    
+        var toolbar = new ToolBar($('bar'));
+        var toolInterval = 25; //工具栏图标间隔，即为图标宽度;
+        var toolnum = 7; //工具栏图标个数;
+        var mapholderwidth = Util.getValueOfNoPX($('mapholder').style.width);
+        //var mapholderwidth = parseInt($('mapholder').style.width.match(/\d+/)[0]);
+        var mapholderleft = Util.getValueOfNoPX($('mapholder').style.left);
+        //var mapholderleft = parseInt($('mapholder').style.left.match(/\d+/)[0]);
+        var toolleft = mapholderwidth + mapholderleft - (toolnum + 2) * toolInterval;  //工具栏初始左侧距离;
+        toolbar.addCommand(new SearchCmd('search', 'search.png', 'search.png', 'search.png', 'absolute', toolleft + toolInterval * 1, 0, 28, 25))
+        toolbar.addTool(new ZoominTool('zoomin', 'zoomin1.png', 'zoomin2.png', 'zoomin3.png', 'absolute', toolleft + toolInterval * 2, 0, 28, 25))
+        toolbar.addTool(new ZoomoutTool('zoomout', 'zoomout1.png', 'zoomout2.png', 'zoomout3.png', 'absolute', toolleft + toolInterval * 3, 0, 28, 25))
+        toolbar.addTool(new PanTool('pan', 'pan1.png', 'pan2.png', 'pan3.png', 'absolute', toolleft + toolInterval * 4, 0, 28, 25), true)//true means default toolitem;
+        toolbar.addCommand(new PrevCmd('back', 'back1.png', 'back2.png', 'back3.png', 'absolute', toolleft + toolInterval * 5, 0, 28, 25))
+        toolbar.addCommand(new NextCmd('forward', 'forward1.png', 'forward2.png', 'forward3.png', 'absolute', toolleft + toolInterval * 6, 0, 28, 25))
+        toolbar.addCommand(new ClearCmd('clear', 'clear1.png', 'clear2.png', 'clear3.png', 'absolute', toolleft + toolInterval * 7, 0, 28, 25))
+        toolbar.addCommand(new FullCmd('full', 'full1.png', 'full2.png', 'full3.png', 'absolute', toolleft + toolInterval * 8, 0, 28, 25))
+        toolbar.addTool(new MeasureTool('measure', 'measureU.png', 'measureX.png', 'measureD.png', 'absolute', toolleft + toolInterval * 9, 0, 28, 25))
+
+        //Create map
+        var map = new Map($('map'));
+        var mt = new SZMapType(ImageBaseDir + '2d/', 'map1.gif', 'map2.gif', 1, 2);
+        map.addMapType(mt, true);
+        var FirstZoomTileRows = mt.firstRows;
+        var FirstZoomTileCols = mt.firstCols;
+        map.setCenter(new Point(114.20, 22.625), 2);
+        map.addToolBar(toolbar); //工具栏;
+        map.addControl(new OvMap($('map'))); //导航窗口;
+        map.addControl(new NavControl($('map'))); //导航条;
+// ]]>
+    </script>
+
+
+    <!--[if lt IE 7]>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('.header_shadow,.logo,.logo em,.go2top a span,.btn,.icons');
+    </script>
+    <![endif]-->
+</body>
+</html>

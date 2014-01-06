@@ -1,0 +1,87 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>JSMap Demo</title>
+    <script type="text/javascript" src="js/map/Util.js"></script>
+    <script type="text/javascript" src="js/map/LoadLibFile.js"></script>
+</head>
+<body>
+<div style="width:100%">
+  <div style="width:980px;margin:0 auto;">
+    <div id="map_wrap">
+        <div id="bar">
+        </div>
+        <div id="mapholder" style="width: 684px; height: 344px; left: 2px">
+            <div id="map" style="width: 680px; height: 340px;"></div>
+        </div>
+    </div>
+    <div class="maptip">
+        <h4>
+            <b class="fgreen">其他功能：</b>
+            <br />
+            <p>
+                <img alt="局部放大" src="images/map/mapTools/zoomin1.png" width="15px" height="15px" />:点击此按钮后，您可以在地图上拉出一个长方形方框，地图将以此框为中心进行放大</p>
+         <p>
+                <img alt="局部缩小" src="images/map/mapTools/zoomout1.png" width="15px" height="15px" />:点击此按钮后，您可以在地图上拉出一个长方形方框，地图将以此框为中心进行放大</p>
+         <p>
+                <img alt="拖放地图" src="images/map/mapTools/pan1.png" width="15px" height="15px" />:拖放地图</p>
+         <p>
+                <img alt="后退" src="images/map/mapTools/back1.png" width="15px" height="15px" />:后退一步</p>
+         <p>
+                <img alt="前进" src="images/map/mapTools/forward1.png" width="15px" height="15px" />:前进一步</p>
+         <p>
+                <img alt="清除痕迹" src="images/map/mapTools/clear1.png" width="15px" height="15px" />:清除历史痕迹</p>
+                  <p>
+                <img alt="默认" src="images/map/mapTools/forward1.png" width="15px" height="15px" />:恢复默认显示</p>
+        </h4>
+    </div>
+    </div>
+</div>
+    
+    <script type="text/javascript">
+// <![CDATA[ 
+        //Global constants    
+        var ScaleParameter = 2;
+        var TileSize = 256;
+        var MaxZoomLevel = 5;
+        var DefaultLevel = 1;
+
+        var FullExtent = new Bound(113.65e16, 114.75e16, 22.35e16, 22.9e16);
+        var Width = Util.distanceByLnglat(FullExtent.getMinX() / 1e16, FullExtent.getMaxY() / 1e16, FullExtent.getMaxX() / 1e16, FullExtent.getMaxY() / 1e16);
+        var ImageBaseDir = "images/map/";
+
+        //Create toolbar    
+        var toolbar = new ToolBar($('bar'));
+        var toolInterval = 25; //工具栏图标间隔，即为图标宽度;
+        var toolnum = 7; //工具栏图标个数;
+        var mapholderwidth = Util.getValueOfNoPX($('mapholder').style.width);
+        //var mapholderwidth = parseInt($('mapholder').style.width.match(/\d+/)[0]);
+        var mapholderleft = Util.getValueOfNoPX($('mapholder').style.left);
+        //var mapholderleft = parseInt($('mapholder').style.left.match(/\d+/)[0]);
+        var toolleft = mapholderwidth + mapholderleft - (toolnum + 2) * toolInterval;  //工具栏初始左侧距离;
+        toolbar.addCommand(new SearchCmd('search', 'search.png', 'search.png', 'search.png', 'absolute', toolleft + toolInterval * 1, 0, 28, 25))
+        toolbar.addTool(new ZoominTool('zoomin', 'zoomin1.png', 'zoomin2.png', 'zoomin3.png', 'absolute', toolleft + toolInterval * 2, 0, 28, 25))
+        toolbar.addTool(new ZoomoutTool('zoomout', 'zoomout1.png', 'zoomout2.png', 'zoomout3.png', 'absolute', toolleft + toolInterval * 3, 0, 28, 25))
+        toolbar.addTool(new PanTool('pan', 'pan1.png', 'pan2.png', 'pan3.png', 'absolute', toolleft + toolInterval * 4, 0, 28, 25), true)//true means default toolitem;
+        toolbar.addCommand(new PrevCmd('back', 'back1.png', 'back2.png', 'back3.png', 'absolute', toolleft + toolInterval * 5, 0, 28, 25))
+        toolbar.addCommand(new NextCmd('forward', 'forward1.png', 'forward2.png', 'forward3.png', 'absolute', toolleft + toolInterval * 6, 0, 28, 25))
+        toolbar.addCommand(new ClearCmd('clear', 'clear1.png', 'clear2.png', 'clear3.png', 'absolute', toolleft + toolInterval * 7, 0, 28, 25))
+        toolbar.addCommand(new FullCmd('full', 'full1.png', 'full2.png', 'full3.png', 'absolute', toolleft + toolInterval * 8, 0, 28, 25))
+        toolbar.addTool(new MeasureTool('measure', 'measureU.png', 'measureX.png', 'measureD.png', 'absolute', toolleft + toolInterval * 9, 0, 28, 25))
+
+        //Create map
+        var map = new Map($('map'));
+        var mt = new SZMapType(ImageBaseDir + '2d/', 'map1.gif', 'map2.gif', 1, 2);
+        map.addMapType(mt, true);
+        var FirstZoomTileRows = mt.firstRows;
+        var FirstZoomTileCols = mt.firstCols;
+        map.setCenter(new Point(114.20, 22.625), 2);
+        map.addToolBar(toolbar); //工具栏;
+        map.addControl(new OvMap($('map'))); //导航窗口;
+        map.addControl(new NavControl($('map'))); //导航条;
+// ]]>
+    </script>
+</body>
+</html>
