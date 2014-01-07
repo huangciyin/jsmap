@@ -3,7 +3,7 @@ jsmap
 #introduce
 A map writed by javascript,just like google map.You can build your own map with it,especially for higher definition compared with google map.Enjoy yourself.
 
-git@bitbucket.org:ciyinhuang/jsmap.git
+git@github.com:huangciyin/jsmap.git
 
 #Contact
 By huangciyin(黄赐印)  
